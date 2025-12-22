@@ -1,0 +1,547 @@
+/* ============================================
+   BLOOM - Board (Community) Styles
+   ============================================ */
+
+/* Board Page */
+.board-page {
+    margin-top: 117px;
+    padding: 40px 0 100px;
+}
+
+.board-page .page-header {
+    text-align: center;
+    padding: 60px 0;
+    background: var(--color-bg-light);
+    margin-bottom: 50px;
+}
+
+.board-page .page-header h1 {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.board-page .page-header p {
+    color: var(--color-text-light);
+    font-size: 14px;
+}
+
+/* Board Navigation */
+.board-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 40px;
+}
+
+.board-nav a {
+    font-size: 14px;
+    color: var(--color-text-light);
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.board-nav a:hover,
+.board-nav a.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* Board List */
+.board-list {
+    border-top: 2px solid var(--color-primary);
+}
+
+.board-list-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px 100px 80px;
+    padding: 15px 20px;
+    background: var(--color-bg-light);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.board-list-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px 100px 80px;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.board-list-item:hover {
+    background: var(--color-bg-light);
+}
+
+.board-list-item .no {
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+.board-list-item .title {
+    font-size: 14px;
+}
+
+.board-list-item .title a:hover {
+    text-decoration: underline;
+}
+
+.board-list-item .title .comment-count {
+    color: var(--color-accent);
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.board-list-item .title .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-right: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.board-list-item .title .badge.notice {
+    background: var(--color-accent);
+}
+
+.board-list-item .title .badge.secret {
+    background: #666;
+}
+
+.board-list-item .writer,
+.board-list-item .date,
+.board-list-item .views {
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+/* Board Gallery */
+.board-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.board-gallery-item {
+    border: 1px solid var(--color-border);
+}
+
+.board-gallery-item .thumbnail {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--color-bg-light);
+}
+
+.board-gallery-item .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.board-gallery-item:hover .thumbnail img {
+    transform: scale(1.05);
+}
+
+.board-gallery-item .info {
+    padding: 20px;
+}
+
+.board-gallery-item .title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.board-gallery-item .title a:hover {
+    text-decoration: underline;
+}
+
+.board-gallery-item .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+/* Board Search */
+.board-search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.board-search select {
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+.board-search input {
+    width: 300px;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+.board-search button {
+    padding: 12px 25px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 13px;
+}
+
+/* Board Write Button */
+.board-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* Board View */
+.board-view {
+    border-top: 2px solid var(--color-primary);
+}
+
+.board-view-header {
+    padding: 30px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.board-view-header .title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.board-view-header .meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+.board-view-header .meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.board-view-content {
+    padding: 50px 30px;
+    min-height: 300px;
+    line-height: 1.8;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.board-view-content img {
+    max-width: 100%;
+}
+
+.board-view-footer {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board-view-footer .file {
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+.board-view-footer .actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Board Navigation (Prev/Next) */
+.board-navigation {
+    border-top: 1px solid var(--color-border);
+}
+
+.board-navigation .nav-item {
+    display: flex;
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+.board-navigation .nav-item .label {
+    width: 100px;
+    color: var(--color-text-light);
+}
+
+.board-navigation .nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* Comments */
+.comments-section {
+    margin-top: 50px;
+}
+
+.comments-section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.comment-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.comment-item .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.comment-item .writer {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.comment-item .date {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+.comment-item .content {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.comment-form {
+    margin-top: 30px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.comment-form .form-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Board Write Form */
+.board-write-form {
+    border-top: 2px solid var(--color-primary);
+}
+
+.board-write-form .form-row {
+    display: flex;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.board-write-form .form-row label {
+    width: 150px;
+    padding: 20px;
+    background: var(--color-bg-light);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.board-write-form .form-row .input-wrap {
+    flex: 1;
+    padding: 15px 20px;
+}
+
+.board-write-form input[type="text"],
+.board-write-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+}
+
+.board-write-form textarea {
+    width: 100%;
+    height: 400px;
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    resize: none;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.board-write-form .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px 0;
+}
+
+/* FAQ Accordion */
+.faq-list {
+    border-top: 2px solid var(--color-primary);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item .question {
+    display: flex;
+    align-items: center;
+    padding: 25px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.faq-item .question:hover {
+    background: var(--color-bg-light);
+}
+
+.faq-item .question .icon {
+    width: 30px;
+    height: 30px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.faq-item .question .text {
+    flex: 1;
+    font-size: 15px;
+}
+
+.faq-item .question .toggle {
+    font-size: 20px;
+    color: var(--color-text-light);
+}
+
+.faq-item .answer {
+    display: none;
+    padding: 25px 70px;
+    background: var(--color-bg-light);
+    line-height: 1.8;
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.faq-item.active .answer {
+    display: block;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+    .board-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .board-page {
+        margin-top: 60px;
+    }
+
+    .board-page .page-header {
+        padding: 40px 20px;
+    }
+
+    .board-page .page-header h1 {
+        font-size: 24px;
+    }
+
+    .board-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .board-list-header {
+        display: none;
+    }
+
+    .board-list-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .board-list-item .no {
+        display: none;
+    }
+
+    .board-list-item .title {
+        order: 1;
+    }
+
+    .board-list-item .writer,
+    .board-list-item .date,
+    .board-list-item .views {
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .board-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .board-search {
+        flex-direction: column;
+    }
+
+    .board-search input {
+        width: 100%;
+    }
+
+    .board-view-header {
+        padding: 20px;
+    }
+
+    .board-view-header .title {
+        font-size: 18px;
+    }
+
+    .board-view-content {
+        padding: 30px 20px;
+    }
+
+    .board-write-form .form-row {
+        flex-direction: column;
+    }
+
+    .board-write-form .form-row label {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .faq-item .question .text {
+        font-size: 14px;
+    }
+
+    .faq-item .answer {
+        padding: 20px;
+    }
+}
