@@ -1,0 +1,511 @@
+/* ============================================
+   PEAK - Order/Cart Page Styles
+   장바구니, 주문, 마이페이지 스타일
+   ============================================ */
+
+/* ========== Page Header ========== */
+.path {
+    padding: 20px 0;
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+.path ol {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.path ol li::after {
+    content: '>';
+    margin-left: 10px;
+    color: #ccc;
+}
+
+.path ol li:last-child::after {
+    content: '';
+}
+
+.titleArea {
+    text-align: center;
+    padding: 40px 0 60px;
+}
+
+.titleArea h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* ========== Order Steps ========== */
+.orderStep {
+    text-align: center;
+    padding: 30px 0 50px;
+}
+
+.orderStep img {
+    max-width: 100%;
+}
+
+/* ========== EC Base Styles ========== */
+.ec-base-box {
+    margin-bottom: 30px;
+    padding: 25px 30px;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+}
+
+.ec-base-box.typeMember .information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ec-base-box .title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ec-base-box .description {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.ec-base-box .mileage {
+    display: flex;
+    gap: 20px;
+}
+
+.ec-base-box .mileage li a {
+    display: flex;
+    gap: 5px;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+.ec-base-box .mileage strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* ========== EC Base Tab ========== */
+.ec-base-tab {
+    margin-bottom: 30px;
+}
+
+.ec-base-tab .menu {
+    display: flex;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.ec-base-tab .menu li {
+    flex: 1;
+}
+
+.ec-base-tab .menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 14px;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-bottom: none;
+    margin-right: -1px;
+}
+
+.ec-base-tab .menu li.selected a,
+.ec-base-tab .menu li a:hover {
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.ec-base-tab .right {
+    padding: 15px 0;
+    font-size: 12px;
+    color: var(--color-text-light);
+    text-align: right;
+}
+
+/* ========== Order List Table ========== */
+.orderListArea {
+    margin-bottom: 30px;
+}
+
+.ec-base-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ec-base-table caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.ec-base-table thead th {
+    padding: 15px 10px;
+    background: var(--color-bg-light);
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ec-base-table tbody td {
+    padding: 20px 10px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ec-base-table tbody td.thumb {
+    width: 100px;
+}
+
+.ec-base-table tbody td.thumb img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ec-base-table tbody td.left {
+    text-align: left;
+}
+
+.ec-base-table tbody td .name {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.ec-base-table tbody td .name a:hover {
+    text-decoration: underline;
+}
+
+.ec-base-table tbody td .option {
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-top: 8px;
+}
+
+.ec-base-table tbody td .option li {
+    margin-bottom: 3px;
+}
+
+.ec-base-table tfoot td {
+    padding: 15px;
+    background: var(--color-bg-light);
+    font-size: 13px;
+}
+
+/* Quantity Control in Table */
+.ec-base-table .quantity {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.ec-base-table .quantity input {
+    width: 50px;
+    padding: 8px;
+    border: none;
+    text-align: center;
+    font-size: 13px;
+}
+
+.ec-base-table .quantity button {
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Price Display */
+.ec-base-table .price {
+    font-weight: 600;
+}
+
+.ec-base-table .discount {
+    color: #e74c3c;
+}
+
+/* Buttons in Table */
+.ec-base-table .btnArea {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ec-base-table .btnArea a,
+.ec-base-table .btnArea button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 11px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.ec-base-table .btnArea a:hover,
+.ec-base-table .btnArea button:hover {
+    background: var(--color-bg-light);
+}
+
+/* ========== Cart Summary ========== */
+.totalSummary {
+    margin: 40px 0;
+    padding: 40px;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+}
+
+.totalSummary .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.totalSummary .price-item {
+    text-align: center;
+}
+
+.totalSummary .price-item .label {
+    display: block;
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.totalSummary .price-item .value {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.totalSummary .operator {
+    font-size: 20px;
+    color: var(--color-text-light);
+}
+
+.totalSummary .total .value {
+    color: var(--color-primary);
+}
+
+/* ========== Action Buttons ========== */
+.ec-base-button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.ec-base-button a,
+.ec-base-button button {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ec-base-button .btnNormal {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.ec-base-button .btnNormal:hover {
+    background: var(--color-bg-light);
+}
+
+.ec-base-button .btnSubmit,
+.ec-base-button .btnStrong {
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color: #fff;
+}
+
+.ec-base-button .btnSubmit:hover,
+.ec-base-button .btnStrong:hover {
+    background: #000;
+}
+
+.ec-base-button .gFull {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* ========== Empty Cart ========== */
+.noData,
+.empty {
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.noData p,
+.empty p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* ========== EC Base Help ========== */
+.ec-base-help {
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-top: 5px;
+}
+
+.ec-base-help.txtWarn {
+    color: #e74c3c;
+}
+
+/* ========== Checkbox Styling ========== */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* ========== Order Info Box ========== */
+.orderInfo {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.orderInfo .box {
+    flex: 1;
+    padding: 30px;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+}
+
+.orderInfo .box h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.orderInfo .box dl {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.orderInfo .box dt {
+    width: 100px;
+    color: var(--color-text-light);
+}
+
+.orderInfo .box dd {
+    flex: 1;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+    .ec-base-box.typeMember .information {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ec-base-box .mileage {
+        flex-wrap: wrap;
+    }
+
+    .orderInfo {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titleArea {
+        padding: 30px 0 40px;
+    }
+
+    .titleArea h2 {
+        font-size: 24px;
+    }
+
+    .ec-base-table {
+        display: block;
+    }
+
+    .ec-base-table thead {
+        display: none;
+    }
+
+    .ec-base-table tbody {
+        display: block;
+    }
+
+    .ec-base-table tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        border-bottom: 1px solid var(--color-border);
+        gap: 15px;
+    }
+
+    .ec-base-table tbody td {
+        padding: 0;
+        border: none;
+    }
+
+    .ec-base-table tbody td.thumb {
+        width: 80px;
+    }
+
+    .ec-base-table tbody td.thumb img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ec-base-table tbody td.left {
+        flex: 1;
+    }
+
+    .totalSummary {
+        padding: 30px 20px;
+    }
+
+    .totalSummary .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .totalSummary .operator {
+        display: none;
+    }
+
+    .ec-base-button {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .ec-base-button a,
+    .ec-base-button button {
+        width: 100%;
+        text-align: center;
+    }
+}

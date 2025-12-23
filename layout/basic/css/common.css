@@ -1,5 +1,5 @@
 /* ============================================
-   BLOOM - 20대 여성 타겟 쇼핑몰 스킨
+   PEAK - 스키 & 스노보드 전문 장비샵 스킨
    Common Styles
    ============================================ */
 
@@ -64,16 +64,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Colors */
 :root {
-    --color-primary: #000;
-    --color-secondary: #e8d5c4;
-    --color-accent: #c9a87c;
-    --color-text: #333;
-    --color-text-light: #888;
-    --color-border: #e5e5e5;
+    --color-primary: #1a365d;
+    --color-secondary: #e2e8f0;
+    --color-accent: #3182ce;
+    --color-text: #2d3748;
+    --color-text-light: #718096;
+    --color-border: #e2e8f0;
     --color-bg: #fff;
-    --color-bg-light: #fafafa;
-    --color-sale: #e74c3c;
-    --color-new: #2ecc71;
+    --color-bg-light: #f7fafc;
+    --color-sale: #e53e3e;
+    --color-new: #38a169;
     --max-width: 1400px;
 }
 

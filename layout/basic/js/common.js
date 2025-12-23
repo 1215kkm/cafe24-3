@@ -35,10 +35,14 @@ document.addEventListener('keydown', function(e) {
 
 // Mobile Menu Toggle
 function toggleMobileMenu() {
-    const nav = document.querySelector('.main-nav');
+    const nav = document.getElementById('mobileNav');
     const btn = document.querySelector('.mobile-menu-btn');
-    nav.classList.toggle('active');
-    btn.classList.toggle('active');
+    if (nav) {
+        nav.classList.toggle('active');
+    }
+    if (btn) {
+        btn.classList.toggle('active');
+    }
 }
 
 // Product Image Gallery (for detail page)
