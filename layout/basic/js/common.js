@@ -1,5 +1,5 @@
 /* ============================================
-   BLOOM - Common JavaScript
+   PEAK - Common JavaScript
    ============================================ */
 
 // Header Scroll Effect

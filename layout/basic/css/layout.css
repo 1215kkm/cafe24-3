@@ -1,5 +1,5 @@
 /* ============================================
-   BLOOM - Layout Styles
+   PEAK - Layout Styles
    Header, Footer, Navigation
    ============================================ */
 
@@ -229,7 +229,6 @@
     gap: 5px;
     padding: 10px;
     cursor: pointer;
-    z-index: 1001;
 }
 
 .mobile-menu-btn span {

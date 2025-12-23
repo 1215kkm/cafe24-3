@@ -36,15 +36,15 @@
                 <a href="/">PEAK</a>
             </h1>
 
-            <!-- Main Navigation (고정 메뉴) -->
-            <nav class="main-nav" id="mainNav">
-                <ul>
-                    <li><a href="/product/list.html?cate_no=1">SKI</a></li>
-                    <li><a href="/product/list.html?cate_no=2">SNOWBOARD</a></li>
-                    <li><a href="/product/list.html?cate_no=3">WEAR</a></li>
-                    <li><a href="/product/list.html?cate_no=4">BOOTS</a></li>
-                    <li><a href="/product/list.html?cate_no=5">ACCESSORIES</a></li>
-                    <li><a href="/product/list.html?cate_no=6">SALE</a></li>
+            <!-- Main Navigation (카페24 카테고리 모듈) -->
+            <nav module="Layout_category">
+                <ul class="main-nav">
+                    <li>
+                        <a href="{$link_category}">{$name}</a>
+                        <ul class="sub-menu" module="Layout_category_sub">
+                            <li><a href="{$link_category}">{$name}</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
@@ -83,14 +83,9 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav" id="mobileNav" module="Layout_category">
         <ul>
-            <li><a href="/product/list.html?cate_no=1">SKI</a></li>
-            <li><a href="/product/list.html?cate_no=2">SNOWBOARD</a></li>
-            <li><a href="/product/list.html?cate_no=3">WEAR</a></li>
-            <li><a href="/product/list.html?cate_no=4">BOOTS</a></li>
-            <li><a href="/product/list.html?cate_no=5">ACCESSORIES</a></li>
-            <li><a href="/product/list.html?cate_no=6">SALE</a></li>
+            <li><a href="{$link_category}">{$name}</a></li>
         </ul>
     </nav>
 </header>
