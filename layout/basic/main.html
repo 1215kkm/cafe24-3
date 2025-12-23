@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{$mall_name}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/layout/basic/img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Common CSS -->
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/main.css)-->
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <!--@import(/layout/basic/header.html)-->
+
+        <!-- Main Content -->
+        <main id="container">
+            <!--@contents-->
+        </main>
+
+        <!-- Footer -->
+        <!--@import(/layout/basic/footer.html)-->
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="close-btn" onclick="closeSearch()">&times;</button>
+        <form class="search-form" action="/product/search.html" method="get">
+            <input type="text" name="keyword" placeholder="Search..." autocomplete="off">
+        </form>
+    </div>
+
+    <!-- Common JS -->
+    <!--@js(/layout/basic/js/common.js)-->
+</body>
+</html>

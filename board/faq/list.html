@@ -1,0 +1,65 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/layout/basic/css/board.css)-->
+
+<div class="board-page">
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="inner">
+            <h1>FAQ</h1>
+            <p>자주 묻는 질문을 확인해보세요</p>
+        </div>
+    </div>
+
+    <div class="inner">
+        <!-- Board Navigation -->
+        <nav class="board-nav">
+            <a href="/board/notice/list.html">공지사항</a>
+            <a href="/board/faq/list.html" class="active">FAQ</a>
+            <a href="/board/inquire/list.html">1:1 문의</a>
+        </nav>
+
+        <!-- FAQ List -->
+        <div module="board_list">
+            <!--@css(/css/module/board/listPackage.css)-->
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="question" onclick="this.parentElement.classList.toggle('active')">
+                        <span class="icon">Q</span>
+                        <span class="text">{$subject}</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="answer">
+                        {$content}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Message -->
+            <div class="empty-result {$no_article_display|display}">
+                <p>등록된 FAQ가 없습니다.</p>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" module="board_Paging">
+                <a href="{$first_page_url}">«</a>
+                <a href="{$prev_page_url}">‹</a>
+                <span class="{$is_current_page|display} current">
+                    <a href="{$page_url}">{$page_num}</a>
+                </span>
+                <a href="{$next_page_url}">›</a>
+                <a href="{$last_page_url}">»</a>
+            </div>
+
+            <!-- Search -->
+            <form class="board-search" action="" method="get">
+                <select name="search_type">
+                    <option value="subject">제목</option>
+                    <option value="content">내용</option>
+                </select>
+                <input type="text" name="search" placeholder="검색어를 입력하세요">
+                <button type="submit" class="btn">검색</button>
+            </form>
+        </div>
+    </div>
+</div>

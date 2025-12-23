@@ -1,0 +1,401 @@
+/* ============================================
+   BLOOM - Main Page Styles
+   ============================================ */
+
+/* ========== Hero Section ========== */
+.hero-section {
+    margin-top: 117px; /* Header height */
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    max-height: 800px;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-slide .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-slide .subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.hero-slide h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.hero-slide .btn {
+    background: #fff;
+    color: var(--color-primary);
+    border-color: #fff;
+}
+
+.hero-slide .btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* ========== Category Section ========== */
+.category-section {
+    padding: 100px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-item:hover img {
+    transform: scale(1.08);
+}
+
+.category-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px;
+}
+
+.category-item .name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ========== Products Section ========== */
+.products-section {
+    padding: 80px 0;
+    background: var(--color-bg-light);
+}
+
+.products-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.products-section .section-title {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.products-section .more-link {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.products-section .more-link::after {
+    content: '→';
+}
+
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-tabs button {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.product-tabs button.active,
+.product-tabs button:hover {
+    color: var(--color-primary);
+}
+
+/* ========== Banner Section ========== */
+.banner-section {
+    padding: 100px 0;
+}
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.banner-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.banner-item:hover img {
+    transform: scale(1.05);
+}
+
+.banner-item .content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.banner-item .subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.banner-item h3 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* ========== Lookbook Section ========== */
+.lookbook-section {
+    padding: 100px 0;
+    background: #f5f0eb;
+}
+
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.lookbook-image {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.lookbook-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lookbook-content {
+    padding: 0 50px;
+}
+
+.lookbook-content .subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.lookbook-content h2 {
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.lookbook-content p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* ========== Instagram Section ========== */
+.instagram-section {
+    padding: 80px 0;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.instagram-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.instagram-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.instagram-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ========== Newsletter Section ========== */
+.newsletter-section {
+    padding: 80px 0;
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.newsletter-section p {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    background: #b8956b;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+    .hero-slide h2 {
+        font-size: 36px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lookbook-grid {
+        gap: 30px;
+    }
+
+    .lookbook-content {
+        padding: 0 30px;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 60px;
+    }
+
+    .hero-slide {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero-slide h2 {
+        font-size: 28px;
+    }
+
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lookbook-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lookbook-content {
+        padding: 30px 0 0;
+        text-align: center;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+}

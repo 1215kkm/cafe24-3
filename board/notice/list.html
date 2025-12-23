@@ -1,0 +1,75 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/layout/basic/css/board.css)-->
+
+<div class="board-page">
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="inner">
+            <h1>Notice</h1>
+            <p>블룸의 새로운 소식을 전해드립니다</p>
+        </div>
+    </div>
+
+    <div class="inner">
+        <!-- Board Navigation -->
+        <nav class="board-nav">
+            <a href="/board/notice/list.html" class="active">공지사항</a>
+            <a href="/board/faq/list.html">FAQ</a>
+            <a href="/board/inquire/list.html">1:1 문의</a>
+        </nav>
+
+        <!-- Board List -->
+        <div module="board_list">
+            <!--@css(/css/module/board/listPackage.css)-->
+
+            <div class="board-list">
+                <div class="board-list-header">
+                    <span>번호</span>
+                    <span>제목</span>
+                    <span>작성자</span>
+                    <span>작성일</span>
+                    <span>조회</span>
+                </div>
+
+                <div class="board-list-item">
+                    <span class="no">{$no}</span>
+                    <div class="title">
+                        <span class="badge notice {$notice_display|display}">공지</span>
+                        <a href="{$link_board_view}">{$subject}</a>
+                        <span class="comment-count {$comment_display|display}">[{$comment_count}]</span>
+                    </div>
+                    <span class="writer">{$writer_name}</span>
+                    <span class="date">{$created_date}</span>
+                    <span class="views">{$hit}</span>
+                </div>
+            </div>
+
+            <!-- Empty Message -->
+            <div class="empty-result {$no_article_display|display}">
+                <p>등록된 게시물이 없습니다.</p>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" module="board_Paging">
+                <a href="{$first_page_url}">«</a>
+                <a href="{$prev_page_url}">‹</a>
+                <span class="{$is_current_page|display} current">
+                    <a href="{$page_url}">{$page_num}</a>
+                </span>
+                <a href="{$next_page_url}">›</a>
+                <a href="{$last_page_url}">»</a>
+            </div>
+
+            <!-- Search -->
+            <form class="board-search" action="" method="get">
+                <select name="search_type">
+                    <option value="subject">제목</option>
+                    <option value="content">내용</option>
+                    <option value="writer_name">작성자</option>
+                </select>
+                <input type="text" name="search" placeholder="검색어를 입력하세요">
+                <button type="submit" class="btn">검색</button>
+            </form>
+        </div>
+    </div>
+</div>
